@@ -18,16 +18,26 @@ Create a channel for the bot in your server. Ensure that your staff can read thi
 
 ### Giving out punishments
 
-To punish a player first ensure their punishment complies with one of the globally punishable offences. If not, but you still wish to punish them, use discord's built in punishment features. Once you have determined which offence they have commited, run the following command:
+To punish a player first ensure their offence is one of the globally punishable offences. If not, but you still wish to punish them, please use discord's built in punishment features. Once you have determined which offence they have commited, run the following command:
 ```
-cr.punish <username#1234> <punishment id> <consequence id> | [Evidence]
+cr.punish <username#1234> <offence id> <consequence id> | [Evidence]
 ```
 As you can see, you can choose the consequence according to your server's preferences. Providing evidence is important as if the ban is appealed this is needed (see the appealing section)
 
 ## Transparency
 
-When a player is punished they are direct messaged information about their punishment. 
+When a player is punished they are direct messaged information about their punishment.
 They can choose to appeal if they wish, however a successful appeal **does not mean the punishment has to be revoked**, if the appeal is successful the log will only be deleted from the database
+### Appealing
+Once a player decides to appeal, a group DM is created between a number of people
+1. The juror. Will normally be me (the author of the bot)
+2. The punishment reciever
+3. The staff member who gave the punishment
+
+Evidence can then be given by both sides. An outcome will be decided based on this logic:
+1. The staff have clear evidence of wrongdoing. The reciever is found guilty
+2. Neither side have clear evidence. The log of the punishment is removed.
+3. The reciever proves they did nothing wrong. The log of the punishment is removed
 
 ## Built With
 * Discord.JS
